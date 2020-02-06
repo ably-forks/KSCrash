@@ -180,8 +180,8 @@
 		CBEE5D561CB86989005EAF61 /* Container+DeepSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB61CB86989005EAF61 /* Container+DeepSearch.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CBEE5D571CB86989005EAF61 /* Container+DeepSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CB71CB86989005EAF61 /* Container+DeepSearch.m */; };
 		CBEE5D581CB86989005EAF61 /* KSVarArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB81CB86989005EAF61 /* KSVarArgs.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CBEE5D591CB86989005EAF61 /* NSData+GZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+GZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBEE5D5A1CB86989005EAF61 /* NSData+GZip.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBA1CB86989005EAF61 /* NSData+GZip.m */; };
+		CBEE5D591CB86989005EAF61 /* NSData+KSCrashGZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+KSCrashGZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBEE5D5A1CB86989005EAF61 /* NSData+KSCrashGZip.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBA1CB86989005EAF61 /* NSData+KSCrashGZip.m */; };
 		CBEE5D5B1CB86989005EAF61 /* KSCrashReportSinkConsole.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CBC1CB86989005EAF61 /* KSCrashReportSinkConsole.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBEE5D5C1CB86989005EAF61 /* KSCrashReportSinkConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBD1CB86989005EAF61 /* KSCrashReportSinkConsole.m */; };
 		CBEE5D5D1CB86989005EAF61 /* KSCrashReportSinkEMail.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CBE1CB86989005EAF61 /* KSCrashReportSinkEMail.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -256,7 +256,7 @@
 		F05D77242101FAB700968B97 /* KSCrashReportFilterStringify.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB31CB86989005EAF61 /* KSCrashReportFilterStringify.h */; };
 		F05D77252101FACB00968B97 /* Container+DeepSearch.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB61CB86989005EAF61 /* Container+DeepSearch.h */; };
 		F05D77262101FACB00968B97 /* KSVarArgs.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB81CB86989005EAF61 /* KSVarArgs.h */; };
-		F05D77272101FACB00968B97 /* NSData+GZip.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+GZip.h */; };
+		F05D77272101FACB00968B97 /* NSData+KSCrashGZip.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+KSCrashGZip.h */; };
 		F05D77282101FADB00968B97 /* Demangle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CD41CB86989005EAF61 /* Demangle.h */; };
 		F05D77292101FADB00968B97 /* DemangleNodes.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CD51CB86989005EAF61 /* DemangleNodes.h */; };
 		F05D772A2101FADB00968B97 /* Fallthrough.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CD61CB86989005EAF61 /* Fallthrough.h */; };
@@ -367,7 +367,7 @@
 		F05D77DE2101FBF300968B97 /* KSCrashReportFilterSets.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CB21CB86989005EAF61 /* KSCrashReportFilterSets.m */; };
 		F05D77E02101FBF300968B97 /* KSCrashReportFilterStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CB41CB86989005EAF61 /* KSCrashReportFilterStringify.m */; };
 		F05D77E22101FBF300968B97 /* Container+DeepSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CB71CB86989005EAF61 /* Container+DeepSearch.m */; };
-		F05D77E52101FBF300968B97 /* NSData+GZip.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBA1CB86989005EAF61 /* NSData+GZip.m */; };
+		F05D77E52101FBF300968B97 /* NSData+KSCrashGZip.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBA1CB86989005EAF61 /* NSData+KSCrashGZip.m */; };
 		F05D77E72101FBF300968B97 /* KSCrashReportSinkConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBD1CB86989005EAF61 /* KSCrashReportSinkConsole.m */; };
 		F05D77E92101FBF300968B97 /* KSCrashReportSinkEMail.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CBF1CB86989005EAF61 /* KSCrashReportSinkEMail.m */; };
 		F05D77EB2101FBF300968B97 /* KSCrashReportSinkQuincyHockey.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5CC11CB86989005EAF61 /* KSCrashReportSinkQuincyHockey.m */; };
@@ -414,7 +414,7 @@
 		F05D7825210203C900968B97 /* KSCrashMonitorType.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5C601CB86989005EAF61 /* KSCrashMonitorType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05D78262102043700968B97 /* KSJSONCodecObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5C821CB86989005EAF61 /* KSJSONCodecObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05D78272102044B00968B97 /* KSCrashReportFilterStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB31CB86989005EAF61 /* KSCrashReportFilterStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F05D78282102045B00968B97 /* NSData+GZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+GZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F05D78282102045B00968B97 /* NSData+KSCrashGZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5CB91CB86989005EAF61 /* NSData+KSCrashGZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05D78292102046900968B97 /* KSMachineContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9821B21DFA142800164220 /* KSMachineContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05D782A2102047600968B97 /* KSCrashInstallation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5C331CB86989005EAF61 /* KSCrashInstallation+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05D782B2102048300968B97 /* KSCrashC.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5C521CB86989005EAF61 /* KSCrashC.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -561,7 +561,7 @@
 				F05D772E2101FADB00968B97 /* SwiftStrings.h in Copy Headers */,
 				F05D77252101FACB00968B97 /* Container+DeepSearch.h in Copy Headers */,
 				F05D77262101FACB00968B97 /* KSVarArgs.h in Copy Headers */,
-				F05D77272101FACB00968B97 /* NSData+GZip.h in Copy Headers */,
+				F05D77272101FACB00968B97 /* NSData+KSCrashGZip.h in Copy Headers */,
 				F05D771D2101FAB700968B97 /* KSCrashReportFilter.h in Copy Headers */,
 				F05D771E2101FAB700968B97 /* KSCrashReportFilterAlert.h in Copy Headers */,
 				F05D771F2101FAB700968B97 /* KSCrashReportFilterAppleFmt.h in Copy Headers */,
@@ -785,8 +785,8 @@
 		CBEE5CB61CB86989005EAF61 /* Container+DeepSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Container+DeepSearch.h"; sourceTree = "<group>"; };
 		CBEE5CB71CB86989005EAF61 /* Container+DeepSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Container+DeepSearch.m"; sourceTree = "<group>"; };
 		CBEE5CB81CB86989005EAF61 /* KSVarArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSVarArgs.h; sourceTree = "<group>"; };
-		CBEE5CB91CB86989005EAF61 /* NSData+GZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GZip.h"; sourceTree = "<group>"; };
-		CBEE5CBA1CB86989005EAF61 /* NSData+GZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GZip.m"; sourceTree = "<group>"; };
+		CBEE5CB91CB86989005EAF61 /* NSData+KSCrashGZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+KSCrashGZip.h"; sourceTree = "<group>"; };
+		CBEE5CBA1CB86989005EAF61 /* NSData+KSCrashGZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+KSCrashGZip.m"; sourceTree = "<group>"; };
 		CBEE5CBC1CB86989005EAF61 /* KSCrashReportSinkConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCrashReportSinkConsole.h; sourceTree = "<group>"; };
 		CBEE5CBD1CB86989005EAF61 /* KSCrashReportSinkConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCrashReportSinkConsole.m; sourceTree = "<group>"; };
 		CBEE5CBE1CB86989005EAF61 /* KSCrashReportSinkEMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCrashReportSinkEMail.h; sourceTree = "<group>"; };
@@ -1155,8 +1155,8 @@
 				CBEE5CB61CB86989005EAF61 /* Container+DeepSearch.h */,
 				CBEE5CB71CB86989005EAF61 /* Container+DeepSearch.m */,
 				CBEE5CB81CB86989005EAF61 /* KSVarArgs.h */,
-				CBEE5CB91CB86989005EAF61 /* NSData+GZip.h */,
-				CBEE5CBA1CB86989005EAF61 /* NSData+GZip.m */,
+				CBEE5CB91CB86989005EAF61 /* NSData+KSCrashGZip.h */,
+				CBEE5CBA1CB86989005EAF61 /* NSData+KSCrashGZip.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1258,7 +1258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEE5CDD1CB86989005EAF61 /* KSCrashInstallation+Private.h in Headers */,
-				CBEE5D591CB86989005EAF61 /* NSData+GZip.h in Headers */,
+				CBEE5D591CB86989005EAF61 /* NSData+KSCrashGZip.h in Headers */,
 				CBEE5D4E1CB86989005EAF61 /* KSCrashReportFilterGZip.h in Headers */,
 				CBEE5D731CB86989005EAF61 /* LLVM.h in Headers */,
 				CB5658021E1DD448005A8302 /* KSStackCursor_SelfThread.h in Headers */,
@@ -1387,7 +1387,7 @@
 				F05D7825210203C900968B97 /* KSCrashMonitorType.h in Headers */,
 				F05D78272102044B00968B97 /* KSCrashReportFilterStringify.h in Headers */,
 				F05D78262102043700968B97 /* KSJSONCodecObjC.h in Headers */,
-				F05D78282102045B00968B97 /* NSData+GZip.h in Headers */,
+				F05D78282102045B00968B97 /* NSData+KSCrashGZip.h in Headers */,
 				F05D78292102046900968B97 /* KSMachineContext.h in Headers */,
 				F05D782A2102047600968B97 /* KSCrashInstallation+Private.h in Headers */,
 				F05D782B2102048300968B97 /* KSCrashC.h in Headers */,
@@ -1633,7 +1633,7 @@
 				CBEE5D5C1CB86989005EAF61 /* KSCrashReportSinkConsole.m in Sources */,
 				CBEE5CE11CB86989005EAF61 /* KSCrashInstallationConsole.m in Sources */,
 				CBEE5D351CB86989005EAF61 /* KSSignalInfo.c in Sources */,
-				CBEE5D5A1CB86989005EAF61 /* NSData+GZip.m in Sources */,
+				CBEE5D5A1CB86989005EAF61 /* NSData+KSCrashGZip.m in Sources */,
 				CBEE5D171CB86989005EAF61 /* KSCrashMonitor_User.c in Sources */,
 				CBEE5D551CB86989005EAF61 /* KSCrashReportFilterStringify.m in Sources */,
 				CBA1A5361DD25043007B1CE7 /* KSCrashReportFixer.c in Sources */,
@@ -1743,7 +1743,7 @@
 				F05D77DE2101FBF300968B97 /* KSCrashReportFilterSets.m in Sources */,
 				F05D77E02101FBF300968B97 /* KSCrashReportFilterStringify.m in Sources */,
 				F05D77E22101FBF300968B97 /* Container+DeepSearch.m in Sources */,
-				F05D77E52101FBF300968B97 /* NSData+GZip.m in Sources */,
+				F05D77E52101FBF300968B97 /* NSData+KSCrashGZip.m in Sources */,
 				F05D77E72101FBF300968B97 /* KSCrashReportSinkConsole.m in Sources */,
 				F05D77E92101FBF300968B97 /* KSCrashReportSinkEMail.m in Sources */,
 				F05D77EB2101FBF300968B97 /* KSCrashReportSinkQuincyHockey.m in Sources */,

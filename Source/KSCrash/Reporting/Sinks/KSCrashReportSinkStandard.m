@@ -29,7 +29,7 @@
 
 #import "KSHTTPMultipartPostBody.h"
 #import "KSHTTPRequestSender.h"
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 #import "KSJSONCodecObjC.h"
 #import "KSReachabilityKSCrash.h"
 #import "NSError+KSCrashSimpleConstructor.h"

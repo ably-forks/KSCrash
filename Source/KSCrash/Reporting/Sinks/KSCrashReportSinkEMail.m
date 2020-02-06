@@ -292,7 +292,7 @@
 
 #else
 
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 
 @implementation KSCrashReportSinkEMail
 
@@ -320,7 +320,7 @@
 {
     for(NSData* reportData in reports)
     {
-        NSString* report = [[NSString alloc] initWithData:[reportData gunzippedWithError:nil] encoding:NSUTF8StringEncoding];
+        NSString* report = [[NSString alloc] initWithData:[reportData KSCrashGunzippedWithError:nil] encoding:NSUTF8StringEncoding];
         NSLog(@"Report\n%@", report);
     }
     kscrash_callCompletion(onCompletion, reports, NO,

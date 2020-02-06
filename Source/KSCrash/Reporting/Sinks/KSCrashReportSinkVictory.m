@@ -33,7 +33,7 @@
 
 #import "KSHTTPMultipartPostBody.h"
 #import "KSHTTPRequestSender.h"
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 #import "KSJSONCodecObjC.h"
 #import "KSReachabilityKSCrash.h"
 #import "NSError+KSCrashSimpleConstructor.h"
@@ -136,7 +136,7 @@
     // Content-Type: multipart/form-data; boundary=xxx
     // Content-Encoding: gzip
     request.HTTPMethod = @"POST";
-    request.HTTPBody = [[body data] gzippedWithCompressionLevel:-1 error:nil];
+    request.HTTPBody = [[body data] KSCrashGzippedWithCompressionLevel:-1 error:nil];
     [request setValue:body.contentType forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [request setValue:@"KSCrashReporter" forHTTPHeaderField:@"User-Agent"];

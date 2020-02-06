@@ -26,7 +26,7 @@
 
 
 #import "KSCrashReportFilterGZip.h"
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 
 
 @interface KSCrashReportFilterGZipCompress ()
@@ -60,7 +60,7 @@
     for(NSData* report in reports)
     {
         NSError* error = nil;
-        NSData* compressedData = [report gzippedWithCompressionLevel:self.compressionLevel
+        NSData* compressedData = [report KSCrashGzippedWithCompressionLevel:self.compressionLevel
                                                                error:&error];
         if(compressedData == nil)
         {
@@ -93,7 +93,7 @@
     for(NSData* report in reports)
     {
         NSError* error = nil;
-        NSData* decompressedData = [report gunzippedWithError:&error];
+        NSData* decompressedData = [report KSCrashGunzippedWithError:&error];
         if(decompressedData == nil)
         {
             kscrash_callCompletion(onCompletion, filteredReports, NO, error);

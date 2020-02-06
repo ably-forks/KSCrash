@@ -28,7 +28,7 @@
 #import <XCTest/XCTest.h>
 
 #import "KSCrashReportFilterGZip.h"
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 
 
 @interface KSCrashReportFilterGZip_Tests : XCTestCase @end
@@ -48,7 +48,7 @@
     NSMutableArray* compressed = [NSMutableArray array];
     for(NSData* data in decompressed)
     {
-        NSData* newData = [data gzippedWithCompressionLevel:-1 error:&error];
+        NSData* newData = [data KSCrashGzippedWithCompressionLevel:-1 error:&error];
         XCTAssertNotNil(newData, @"");
         XCTAssertNil(error, @"");
         [compressed addObject:newData];
@@ -77,7 +77,7 @@
     NSMutableArray* compressed = [NSMutableArray array];
     for(NSData* data in decompressed)
     {
-        NSData* newData = [data gzippedWithCompressionLevel:-1 error:&error];
+        NSData* newData = [data KSCrashGzippedWithCompressionLevel:-1 error:&error];
         XCTAssertNotNil(newData, @"");
         XCTAssertNil(error, @"");
         [compressed addObject:newData];

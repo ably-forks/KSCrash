@@ -1,5 +1,5 @@
 //
-//  NSData+GZip.h
+//  NSData+KSCrashGZip.h
 //
 //  Created by Karl Stenerud on 2012-02-19.
 //
@@ -31,7 +31,7 @@
 /**
  * GNU zip/unzip support for NSData.
  */
-@interface NSData (GZip)
+@interface NSData (KSCrashGZip)
 
 /**
  * Gzip the data in this object (no header).
@@ -47,7 +47,7 @@
  *
  * @return A new NSData with the gzipped contents of this object.
  */
-- (NSData*) gzippedWithCompressionLevel:(int) compressionLevel
+- (NSData*) KSCrashGzippedWithCompressionLevel:(int) compressionLevel
                                   error:(NSError**) error;
 
 /**
@@ -58,6 +58,6 @@
  *
  * @return A new NSData with the gunzipped contents of this object.
  */
-- (NSData*) gunzippedWithError:(NSError**) error;
+- (NSData*) KSCrashGunzippedWithError:(NSError**) error;
 
 @end
