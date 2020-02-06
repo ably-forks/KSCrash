@@ -1,5 +1,5 @@
 //
-//  NSString+URLEncode.h
+//  NSString+KSCrashURLEncode.h
 //
 //  Created by karl on 2016-04-11.
 //
@@ -26,8 +26,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (URLEncode)
+@interface NSString (KSCrashURLEncode)
 
-- (NSString*) URLEncoded;
+- (NSString*) KSCrashURLEncoded;
 
 @end

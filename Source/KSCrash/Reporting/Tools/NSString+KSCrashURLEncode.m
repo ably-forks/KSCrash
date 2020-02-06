@@ -1,5 +1,5 @@
 //
-//  NSString+URLEncode.m
+//  NSString+KSCrashURLEncode.m
 //
 //  Created by karl on 2016-04-11.
 //
@@ -24,11 +24,11 @@
 // THE SOFTWARE.
 //
 
-#import "NSString+URLEncode.h"
+#import "NSString+KSCrashURLEncode.h"
 
-@implementation NSString (URLEncode)
+@implementation NSString (KSCrashURLEncode)
 
-- (NSString*) URLEncoded
+- (NSString*) KSCrashURLEncoded
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
     return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
