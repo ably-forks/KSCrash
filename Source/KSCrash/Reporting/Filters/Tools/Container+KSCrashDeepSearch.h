@@ -1,5 +1,5 @@
 //
-//  Container+DeepSearch
+//  Container+KSCrashDeepSearch
 //
 //  Created by Karl Stenerud on 2012-08-25.
 //
@@ -34,8 +34,8 @@
  * key series is passed as a serialized path, similar to filesystem paths
  * (a string where entries are separated by slashes).
  *
- * For example, if objectForDeepKey were called with [@"top", @"sublevel", @"2",
- * @"item] (or objectForKeyPath were called with @"top/sublevel/2/item"), it
+ * For example, if KSCrashObjectForDeepKey were called with [@"top", @"sublevel", @"2",
+ * @"item] (or KSCrashObjectForKeyPath were called with @"top/sublevel/2/item"), it
  * would search as follows:
  *
  *    result = [self objectForKey:@"top"];
@@ -60,7 +60,7 @@
 /**
  * Deep key search methods for NSDictionary.
  */
-@interface NSDictionary (DeepSearch)
+@interface NSDictionary (KSCrashDeepSearch)
 
 #pragma mark - Lookups
 
@@ -71,7 +71,7 @@
  *
  * @param deepKey A set of keys to drill down with.
  */
-- (id) objectForDeepKey:(NSArray*) deepKey;
+- (id) KSCrashObjectForDeepKey:(NSArray*) deepKey;
 
 
 /** Do a deep search using the specified keys.
@@ -81,7 +81,7 @@
  *
  * @param keyPath A full key path, separated by slash (e.g. @"a/b/c")
  */
-- (id) objectForKeyPath:(NSString*) keyPath;
+- (id) KSCrashObjectForKeyPath:(NSString*) keyPath;
 
 
 #pragma mark - Mutators
@@ -95,7 +95,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) setObject:(id) anObject forDeepKey:(NSArray*) deepKey;
+- (void) KSCrashSetObject:(id) anObject forDeepKey:(NSArray*) deepKey;
 
 /** Set an associated object at the specified key path.
  *
@@ -106,7 +106,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) setObject:(id) anObject forKeyPath:(NSString*) keyPath;
+- (void) KSCrashSetObject:(id) anObject forKeyPath:(NSString*) keyPath;
 
 /** Remove an associated object at the specified deep key.
  *
@@ -117,7 +117,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) removeObjectForDeepKey:(NSArray*) deepKey;
+- (void) KSCrashRemoveObjectForDeepKey:(NSArray*) deepKey;
 
 /** Remove an associated object at the specified key path.
  *
@@ -128,7 +128,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) removeObjectForKeyPath:(NSString*) keyPath;
+- (void) KSCrashRemoveObjectForKeyPath:(NSString*) keyPath;
 
 @end
 
@@ -138,7 +138,7 @@
 /**
  * Deep key search methods for NSDictionary.
  */
-@interface NSArray (DeepSearch)
+@interface NSArray (KSCrashDeepSearch)
 
 #pragma mark - Lookups
 
@@ -149,7 +149,7 @@
  *
  * @param deepKey A set of keys to drill down with.
  */
-- (id) objectForDeepKey:(NSArray*) deepKey;
+- (id) KSCrashObjectForDeepKey:(NSArray*) deepKey;
 
 
 /** Do a deep search using the specified keys.
@@ -159,7 +159,7 @@
  *
  * @param keyPath A full key path, separated by slash (e.g. @"a/b/c")
  */
-- (id) objectForKeyPath:(NSString*) keyPath;
+- (id) KSCrashObjectForKeyPath:(NSString*) keyPath;
 
 
 #pragma mark - Mutators
@@ -173,7 +173,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) setObject:(id) anObject forDeepKey:(NSArray*) deepKey;
+- (void) KSCrashSetObject:(id) anObject forDeepKey:(NSArray*) deepKey;
 
 /** Set an associated object at the specified key path.
  *
@@ -184,7 +184,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) setObject:(id) anObject forKeyPath:(NSString*) keyPath;
+- (void) KSCrashSetObject:(id) anObject forKeyPath:(NSString*) keyPath;
 
 /** Remove an associated object at the specified deep key.
  *
@@ -195,7 +195,7 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) removeObjectForDeepKey:(NSArray*) deepKey;
+- (void) KSCrashRemoveObjectForDeepKey:(NSArray*) deepKey;
 
 /** Remove an associated object at the specified key path.
  *
@@ -206,6 +206,6 @@
  * If the lookup fails at any level, it will throw an exception describing which
  * object in the hierarchy did not respond to any object accessor methods.
  */
-- (void) removeObjectForKeyPath:(NSString*) keyPath;
+- (void) KSCrashRemoveObjectForKeyPath:(NSString*) keyPath;
 
 @end
