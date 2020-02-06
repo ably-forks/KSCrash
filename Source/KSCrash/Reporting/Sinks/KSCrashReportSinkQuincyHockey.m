@@ -35,7 +35,7 @@
 #import "KSCrashReportFilterBasic.h"
 #import "KSJSONCodecObjC.h"
 #import "KSReachabilityKSCrash.h"
-#import "Container+DeepSearch.h"
+#import "Container+KSCrashDeepSearch.h"
 #import "NSError+KSCrashSimpleConstructor.h"
 #import <mach/machine.h>
 #import "KSCrashMonitor_System.h"
@@ -137,7 +137,7 @@ crashDescriptionKeys:(NSArray*) crashDescriptionKeys
     {
         NSString* stringValue = nil;
         NSString* key = [keys objectAtIndex:i];
-        id value = [report objectForKeyPath:key];
+        id value = [report KSCrashObjectForKeyPath:key];
         if([value isKindOfClass:[NSString class]])
         {
             stringValue = value;
@@ -318,9 +318,9 @@ crashDescriptionKeys:(NSArray*) crashDescriptionKeys
     NSDictionary* report = [reportTuple objectForKey:kFilterKeyStandard];
     NSString* appleReport = [reportTuple objectForKey:kFilterKeyApple];
     NSDictionary* systemDict = [report objectForKey:@KSCrashField_System];
-    NSString* userID = self.userIDKey == nil ? nil : [self blankForNil:[report objectForKeyPath:self.userIDKey]];
-    NSString* userName = self.userNameKey == nil ? nil : [self blankForNil:[report objectForKeyPath:self.userNameKey]];
-    NSString* contactEmail = self.contactEmailKey == nil ? nil : [self blankForNil:[report objectForKeyPath:self.contactEmailKey]];
+    NSString* userID = self.userIDKey == nil ? nil : [self blankForNil:[report KSCrashObjectForKeyPath:self.userIDKey]];
+    NSString* userName = self.userNameKey == nil ? nil : [self blankForNil:[report KSCrashObjectForKeyPath:self.userNameKey]];
+    NSString* contactEmail = self.contactEmailKey == nil ? nil : [self blankForNil:[report KSCrashObjectForKeyPath:self.contactEmailKey]];
     NSString* crashReportDescription = [self.crashDescriptionKeys count] == 0 ? nil : [self descriptionForReport:report keys:self.crashDescriptionKeys];
     NSString* uuids = [self uuidsFromReport:report];
     NSDictionary* reportInfo = [report objectForKey:@KSCrashField_Report];

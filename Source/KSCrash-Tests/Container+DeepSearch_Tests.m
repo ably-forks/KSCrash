@@ -27,7 +27,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "Container+DeepSearch.h"
+#import "Container+KSCrashDeepSearch.h"
 
 
 @interface Container_DeepSearch_Tests : XCTestCase @end

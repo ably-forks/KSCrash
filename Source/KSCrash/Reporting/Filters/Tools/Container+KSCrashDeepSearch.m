@@ -1,5 +1,5 @@
 //
-//  Container+DeepSearch
+//  Container+KSCrashDeepSearch
 //
 //  Created by Karl Stenerud on 2012-08-25.
 //
@@ -25,7 +25,7 @@
 //
 
 
-#import "Container+DeepSearch.h"
+#import "Container+KSCrashDeepSearch.h"
 
 
 #pragma mark - Base functionality
@@ -193,34 +193,34 @@ static void removeObjectForKeyPath(id container, NSString* keyPath)
 
 #pragma mark - NSDictionary Category
 
-@implementation NSDictionary (DeepSearch)
+@implementation NSDictionary (KSCrashDeepSearch)
 
-- (id) objectForDeepKey:(NSArray*) deepKey
+- (id) KSCrashObjectForDeepKey:(NSArray*) deepKey
 {
     return objectForDeepKey(self, deepKey);
 }
 
-- (id) objectForKeyPath:(NSString*) keyPath
+- (id) KSCrashObjectForKeyPath:(NSString*) keyPath
 {
     return objectForKeyPath(self, keyPath);
 }
 
-- (void) setObject:(id) anObject forDeepKey:(NSArray*) deepKey
+- (void) KSCrashSetObject:(id) anObject forDeepKey:(NSArray*) deepKey
 {
     setObjectForDeepKey(self, anObject, deepKey);
 }
 
-- (void) setObject:(id) anObject forKeyPath:(NSString*) keyPath
+- (void) KSCrashSetObject:(id) anObject forKeyPath:(NSString*) keyPath
 {
     setObjectForKeyPath(self, anObject, keyPath);
 }
 
-- (void) removeObjectForDeepKey:(NSArray*) deepKey
+- (void) KSCrashRemoveObjectForDeepKey:(NSArray*) deepKey
 {
     removeObjectForDeepKey(self, deepKey);
 }
 
-- (void) removeObjectForKeyPath:(NSString*) keyPath
+- (void) KSCrashRemoveObjectForKeyPath:(NSString*) keyPath
 {
     removeObjectForKeyPath(self, keyPath);
 }
@@ -230,34 +230,34 @@ static void removeObjectForKeyPath(id container, NSString* keyPath)
 
 #pragma mark - NSArray Category
 
-@implementation NSArray (DeepSearch)
+@implementation NSArray (KSCrashDeepSearch)
 
-- (id) objectForDeepKey:(NSArray*) deepKey
+- (id) KSCrashObjectForDeepKey:(NSArray*) deepKey
 {
     return objectForDeepKey(self, deepKey);
 }
 
-- (id) objectForKeyPath:(NSString*) keyPath
+- (id) KSCrashObjectForKeyPath:(NSString*) keyPath
 {
     return objectForKeyPath(self, keyPath);
 }
 
-- (void) setObject:(id) anObject forDeepKey:(NSArray*) deepKey
+- (void) KSCrashSetObject:(id) anObject forDeepKey:(NSArray*) deepKey
 {
     setObjectForDeepKey(self, anObject, deepKey);
 }
 
-- (void) setObject:(id) anObject forKeyPath:(NSString*) keyPath
+- (void) KSCrashSetObject:(id) anObject forKeyPath:(NSString*) keyPath
 {
     setObjectForKeyPath(self, anObject, keyPath);
 }
 
-- (void) removeObjectForDeepKey:(NSArray*) deepKey
+- (void) KSCrashRemoveObjectForDeepKey:(NSArray*) deepKey
 {
     removeObjectForDeepKey(self, deepKey);
 }
 
-- (void) removeObjectForKeyPath:(NSString*) keyPath
+- (void) KSCrashRemoveObjectForKeyPath:(NSString*) keyPath
 {
     removeObjectForKeyPath(self, keyPath);
 }

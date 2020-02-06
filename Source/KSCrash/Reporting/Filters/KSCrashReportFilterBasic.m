@@ -27,7 +27,7 @@
 
 #import "KSCrashReportFilterBasic.h"
 #import "NSError+KSCrashSimpleConstructor.h"
-#import "Container+DeepSearch.h"
+#import "Container+KSCrashDeepSearch.h"
 #import "KSVarArgs.h"
 
 //#define KSLogger_LocalLevel TRACE
@@ -389,7 +389,7 @@
         id object = nil;
         if([self.key isKindOfClass:[NSString class]])
         {
-            object = [report objectForKeyPath:self.key];
+            object = [report KSCrashObjectForKeyPath:self.key];
         }
         else
         {
@@ -483,7 +483,7 @@
             {
                 [concatenated appendFormat:self.separatorFmt, key];
             }
-            id object = [report objectForKeyPath:key];
+            id object = [report KSCrashObjectForKeyPath:key];
             [concatenated appendFormat:@"%@", object];
         }
         [filteredReports addObject:concatenated];
@@ -547,7 +547,7 @@
         NSMutableDictionary* subset = [NSMutableDictionary dictionary];
         for(NSString* keyPath in self.keyPaths)
         {
-            id object = [report objectForKeyPath:keyPath];
+            id object = [report KSCrashObjectForKeyPath:keyPath];
             if(object == nil)
             {
                 kscrash_callCompletion(onCompletion, filteredReports, NO,
