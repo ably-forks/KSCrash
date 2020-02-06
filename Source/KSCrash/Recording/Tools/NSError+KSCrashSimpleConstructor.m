@@ -1,5 +1,5 @@
 //
-//  NSError+SimpleConstructor.m
+//  NSError+KSCrashSimpleConstructor.m
 //
 //  Created by Karl Stenerud on 2013-02-09.
 //
@@ -24,12 +24,12 @@
 // THE SOFTWARE.
 //
 
-#import "NSError+SimpleConstructor.h"
+#import "NSError+KSCrashSimpleConstructor.h"
 
 
-@implementation NSError (SimpleConstructor)
+@implementation NSError (KSCrashSimpleConstructor)
 
-+ (NSError*) errorWithDomain:(NSString*) domain code:(NSInteger) code description:(NSString*) fmt, ...
++ (NSError*) KSCrashErrorWithDomain:(NSString*) domain code:(NSInteger) code description:(NSString*) fmt, ...
 {
     va_list args;
     va_start(args, fmt);
@@ -43,7 +43,7 @@
                                                                 forKey:NSLocalizedDescriptionKey]];
 }
 
-+ (BOOL) fillError:(NSError* __autoreleasing *) error
++ (BOOL) KSCrashFillError:(NSError* __autoreleasing *) error
         withDomain:(NSString*) domain
               code:(NSInteger) code
        description:(NSString*) fmt, ...
@@ -64,7 +64,7 @@
     return NO;
 }
 
-+ (BOOL) clearError:(NSError* __autoreleasing *) error
++ (BOOL) KSCrashClearError:(NSError* __autoreleasing *) error
 {
     if(error != nil)
     {
