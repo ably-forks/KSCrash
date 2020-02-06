@@ -28,7 +28,7 @@
 #import "KSHTTPMultipartPostBody.h"
 
 #import "NSMutableData+AppendUTF8.h"
-#import "NSString+URLEncode.h"
+#import "NSString+KSCrashURLEncode.h"
 
 
 /**
