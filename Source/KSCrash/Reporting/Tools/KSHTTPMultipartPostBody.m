@@ -27,7 +27,7 @@
 
 #import "KSHTTPMultipartPostBody.h"
 
-#import "NSMutableData+AppendUTF8.h"
+#import "NSMutableData+KSCrashAppendUTF8.h"
 #import "NSString+KSCrashURLEncode.h"
 
 
@@ -172,30 +172,30 @@
     for(KSHTTPPostField* field in _fields)
     {
         if (firstFieldSent) {
-            [data appendUTF8String:@"\r\n"];
+            [data KSCrashAppendUTF8String:@"\r\n"];
         } else {
             firstFieldSent = YES;
         }
-        [data appendUTF8Format:@"--%@\r\n", _boundary];
+        [data KSCrashAppendUTF8Format:@"--%@\r\n", _boundary];
         if(field.filename != nil)
         {
-            [data appendUTF8Format:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",
+            [data KSCrashAppendUTF8Format:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",
              [self toStringWithQuotesEscaped:field.name],
              [self toStringWithQuotesEscaped:field.filename]];
         }
         else
         {
-            [data appendUTF8Format:@"Content-Disposition: form-data; name=\"%@\"\r\n",
+            [data KSCrashAppendUTF8Format:@"Content-Disposition: form-data; name=\"%@\"\r\n",
              [self toStringWithQuotesEscaped:field.name]];
         }
         if(field.contentType != nil)
         {
-            [data appendUTF8Format:@"Content-Type: %@\r\n", field.contentType];
+            [data KSCrashAppendUTF8Format:@"Content-Type: %@\r\n", field.contentType];
         }
-        [data appendUTF8Format:@"\r\n", _boundary];
+        [data KSCrashAppendUTF8Format:@"\r\n", _boundary];
         [data appendData:field.data];
     }
-    [data appendUTF8Format:@"\r\n--%@--\r\n", _boundary];
+    [data KSCrashAppendUTF8Format:@"\r\n--%@--\r\n", _boundary];
     
     return data;
 }
