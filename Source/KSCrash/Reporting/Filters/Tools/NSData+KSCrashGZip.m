@@ -1,5 +1,5 @@
 //
-//  NSData+GZip.m
+//  NSData+KSCrashGZip.m
 //
 //  Created by Karl Stenerud on 2012-02-19.
 //
@@ -25,7 +25,7 @@
 //
 
 
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 
 #import "NSError+KSCrashSimpleConstructor.h"
 #import <zlib.h>
@@ -60,9 +60,9 @@ static NSString* zlibError(int errorCode)
     return [NSString stringWithFormat:@"Unknown error: %d", errorCode];
 }
 
-@implementation NSData (GZip)
+@implementation NSData (KSCrashGZip)
 
-- (NSData*) gzippedWithCompressionLevel:(int) compressionLevel
+- (NSData*) KSCrashGzippedWithCompressionLevel:(int) compressionLevel
                                   error:(NSError* __autoreleasing *) error
 {
     uInt length = (uInt)[self length];
@@ -121,7 +121,7 @@ static NSString* zlibError(int errorCode)
     return compressedData;
 }
 
-- (NSData*) gunzippedWithError:(NSError* __autoreleasing *) error
+- (NSData*) KSCrashGunzippedWithError:(NSError* __autoreleasing *) error
 {
     uInt length = (uInt)[self length];
     if(length == 0)

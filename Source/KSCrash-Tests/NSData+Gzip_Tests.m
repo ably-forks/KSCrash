@@ -26,7 +26,7 @@
 
 
 #import <XCTest/XCTest.h>
-#import "NSData+GZip.h"
+#import "NSData+KSCrashGZip.h"
 
 
 @interface NSData_Gzip_Tests : XCTestCase @end
@@ -46,9 +46,9 @@
 
     NSError* error = nil;
     NSData* original = [NSData dataWithData:data];
-    NSData* compressed = [original gzippedWithCompressionLevel:-1 error:&error];
+    NSData* compressed = [original KSCrashGzippedWithCompressionLevel:-1 error:&error];
     XCTAssertNil(error, @"");
-    NSData* uncompressed = [compressed gunzippedWithError:&error];
+    NSData* uncompressed = [compressed KSCrashGunzippedWithError:&error];
     XCTAssertNil(error, @"");
 
     XCTAssertEqualObjects(uncompressed, original, @"");
@@ -60,9 +60,9 @@
 {
     NSError* error = nil;
     NSData* original = [NSData data];
-    NSData* compressed = [original gzippedWithCompressionLevel:-1 error:&error];
+    NSData* compressed = [original KSCrashGzippedWithCompressionLevel:-1 error:&error];
     XCTAssertNil(error, @"");
-    NSData* uncompressed = [compressed gunzippedWithError:&error];
+    NSData* uncompressed = [compressed KSCrashGunzippedWithError:&error];
     XCTAssertNil(error, @"");
 
     XCTAssertEqualObjects(uncompressed, original, @"");
@@ -80,8 +80,8 @@
     }
 
     NSData* original = [NSData dataWithData:data];
-    NSData* compressed = [original gzippedWithCompressionLevel:-1 error:nil];
-    NSData* uncompressed = [compressed gunzippedWithError:nil];
+    NSData* compressed = [original KSCrashGzippedWithCompressionLevel:-1 error:nil];
+    NSData* uncompressed = [compressed KSCrashGunzippedWithError:nil];
 
     XCTAssertEqualObjects(uncompressed, original, @"");
     XCTAssertFalse([compressed isEqualToData:uncompressed], @"");
@@ -91,8 +91,8 @@
 - (void) testCompressDecompressEmptyNilError
 {
     NSData* original = [NSData data];
-    NSData* compressed = [original gzippedWithCompressionLevel:-1 error:nil];
-    NSData* uncompressed = [compressed gunzippedWithError:nil];
+    NSData* compressed = [original KSCrashGzippedWithCompressionLevel:-1 error:nil];
+    NSData* uncompressed = [compressed KSCrashGunzippedWithError:nil];
 
     XCTAssertEqualObjects(uncompressed, original, @"");
     XCTAssertEqualObjects(compressed, original, @"");
