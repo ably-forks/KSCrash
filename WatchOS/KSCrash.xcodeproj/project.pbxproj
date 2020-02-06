@@ -91,8 +91,8 @@
 		CB736FCF1D9B6F0E00E3230F /* KSSysCtl.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FA21D9B6F0E00E3230F /* KSSysCtl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CB736FD01D9B6F0E00E3230F /* KSCrashMonitor_Zombie.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FA31D9B6F0E00E3230F /* KSCrashMonitor_Zombie.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CB736FD11D9B6F0E00E3230F /* KSCrashMonitor_Zombie.c in Sources */ = {isa = PBXBuildFile; fileRef = CB736FA41D9B6F0E00E3230F /* KSCrashMonitor_Zombie.c */; };
-		CB736FD41D9B6F0E00E3230F /* NSError+SimpleConstructor.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FA71D9B6F0E00E3230F /* NSError+SimpleConstructor.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CB736FD51D9B6F0E00E3230F /* NSError+SimpleConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB736FA81D9B6F0E00E3230F /* NSError+SimpleConstructor.m */; };
+		CB736FD41D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FA71D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CB736FD51D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB736FA81D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.m */; };
 		CB736FE21D9B6F4D00E3230F /* None.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FDF1D9B6F4D00E3230F /* None.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CB736FE31D9B6F4D00E3230F /* Optional.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FE01D9B6F4D00E3230F /* Optional.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CB736FE41D9B6F4D00E3230F /* StringRef.h in Headers */ = {isa = PBXBuildFile; fileRef = CB736FE11D9B6F4D00E3230F /* StringRef.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -271,8 +271,8 @@
 		CB736FA21D9B6F0E00E3230F /* KSSysCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSSysCtl.h; path = ../../Source/KSCrash/Recording/Tools/KSSysCtl.h; sourceTree = "<group>"; };
 		CB736FA31D9B6F0E00E3230F /* KSCrashMonitor_Zombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSCrashMonitor_Zombie.h; path = ../../Source/KSCrash/Recording/Monitors/KSCrashMonitor_Zombie.h; sourceTree = "<group>"; };
 		CB736FA41D9B6F0E00E3230F /* KSCrashMonitor_Zombie.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = KSCrashMonitor_Zombie.c; path = ../../Source/KSCrash/Recording/Monitors/KSCrashMonitor_Zombie.c; sourceTree = "<group>"; };
-		CB736FA71D9B6F0E00E3230F /* NSError+SimpleConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+SimpleConstructor.h"; path = "../../Source/KSCrash/Recording/Tools/NSError+SimpleConstructor.h"; sourceTree = "<group>"; };
-		CB736FA81D9B6F0E00E3230F /* NSError+SimpleConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+SimpleConstructor.m"; path = "../../Source/KSCrash/Recording/Tools/NSError+SimpleConstructor.m"; sourceTree = "<group>"; };
+		CB736FA71D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+KSCrashSimpleConstructor.h"; path = "../../Source/KSCrash/Recording/Tools/NSError+KSCrashSimpleConstructor.h"; sourceTree = "<group>"; };
+		CB736FA81D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+KSCrashSimpleConstructor.m"; path = "../../Source/KSCrash/Recording/Tools/NSError+KSCrashSimpleConstructor.m"; sourceTree = "<group>"; };
 		CB736FDF1D9B6F4D00E3230F /* None.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = None.h; path = ../../Source/KSCrash/llvm/ADT/None.h; sourceTree = "<group>"; };
 		CB736FE01D9B6F4D00E3230F /* Optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Optional.h; path = ../../Source/KSCrash/llvm/ADT/Optional.h; sourceTree = "<group>"; };
 		CB736FE11D9B6F4D00E3230F /* StringRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringRef.h; path = ../../Source/KSCrash/llvm/ADT/StringRef.h; sourceTree = "<group>"; };
@@ -537,8 +537,8 @@
 				CB736FA21D9B6F0E00E3230F /* KSSysCtl.h */,
 				CB25A5E91DF2372E00EC2B02 /* KSThread.c */,
 				CB25A5EA1DF2372E00EC2B02 /* KSThread.h */,
-				CB736FA71D9B6F0E00E3230F /* NSError+SimpleConstructor.h */,
-				CB736FA81D9B6F0E00E3230F /* NSError+SimpleConstructor.m */,
+				CB736FA71D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.h */,
+				CB736FA81D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -765,7 +765,7 @@
 				CB69B8CE1DC043B4002713B1 /* KSDate.h in Headers */,
 				CB736FB41D9B6F0E00E3230F /* KSDynamicLinker.h in Headers */,
 				CB9821BD1DFA15FA00164220 /* KSMachineContext_Apple.h in Headers */,
-				CB736FD41D9B6F0E00E3230F /* NSError+SimpleConstructor.h in Headers */,
+				CB736FD41D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.h in Headers */,
 				CB7370721D9B6FE500E3230F /* KSCrashInstallationConsole.h in Headers */,
 				CB7370411D9B6FC800E3230F /* KSCrashReportSinkStandard.h in Headers */,
 				CB736F4E1D9B6ECD00E3230F /* KSCrashDoctor.h in Headers */,
@@ -911,7 +911,7 @@
 				CB7370711D9B6FE500E3230F /* KSCrashInstallation+Alert.m in Sources */,
 				CB25A6031DF23B8100EC2B02 /* KSDebug.c in Sources */,
 				CB7370301D9B6FB900E3230F /* NSData+GZip.m in Sources */,
-				CB736FD51D9B6F0E00E3230F /* NSError+SimpleConstructor.m in Sources */,
+				CB736FD51D9B6F0E00E3230F /* NSError+KSCrashSimpleConstructor.m in Sources */,
 				CB7370441D9B6FC800E3230F /* KSCrashReportSinkVictory.m in Sources */,
 				CB736FB71D9B6F0E00E3230F /* KSJSONCodec.c in Sources */,
 				CB736F7A1D9B6EF500E3230F /* KSCrashMonitor_NSException.m in Sources */,

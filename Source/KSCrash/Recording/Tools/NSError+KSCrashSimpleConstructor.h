@@ -1,5 +1,5 @@
 //
-//  NSError+SimpleConstructor.h
+//  NSError+KSCrashSimpleConstructor.h
 //
 //  Created by Karl Stenerud on 2013-02-09.
 //
@@ -29,7 +29,7 @@
 /**
  * Simpler interface for constructing NSError objects.
  */
-@interface NSError (SimpleConstructor)
+@interface NSError (KSCrashSimpleConstructor)
 
 /** Convenience constructor to make an error with the specified localized description.
  *
@@ -38,7 +38,7 @@
  * @param fmt Description of the error (gets placed into the user data with the key
  *                    NSLocalizedDescriptionKey).
  */
-+ (NSError*) errorWithDomain:(NSString*) domain
++ (NSError*) KSCrashErrorWithDomain:(NSString*) domain
                         code:(NSInteger) code
                  description:(NSString*) fmt, ...;
 
@@ -51,7 +51,7 @@
  *                    NSLocalizedDescriptionKey).
  * @return NO (to keep the analyzer happy).
  */
-+ (BOOL) fillError:(NSError**) error
++ (BOOL) KSCrashFillError:(NSError**) error
         withDomain:(NSString*) domain
               code:(NSInteger) code
        description:(NSString*) fmt, ...;
@@ -61,6 +61,6 @@
  * @param error Error pointer to fill (ignored if nil).
  * @return NO (to keep the analyzer happy).
  */
-+ (BOOL) clearError:(NSError**) error;
++ (BOOL) KSCrashClearError:(NSError**) error;
 
 @end

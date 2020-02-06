@@ -31,7 +31,7 @@
 #import "KSCrashReportFilterBasic.h"
 #import "KSCrashReportFilterGZip.h"
 #import "KSCrashReportFilterJSON.h"
-#import "NSError+SimpleConstructor.h"
+#import "NSError+KSCrashSimpleConstructor.h"
 #import "KSSystemCapabilities.h"
 
 //#define KSLogger_LocalLevel TRACE
@@ -115,7 +115,7 @@
             break;
         case MFMailComposeResultCancelled:
             kscrash_callCompletion(self.onCompletion, self.reports, NO,
-                                     [NSError errorWithDomain:[[self class] description]
+                                     [NSError KSCrashErrorWithDomain:[[self class] description]
                                                          code:0
                                                   description:@"User cancelled"]);
             break;
@@ -125,7 +125,7 @@
         default:
         {
             kscrash_callCompletion(self.onCompletion, self.reports, NO,
-                                     [NSError errorWithDomain:[[self class] description]
+                                     [NSError KSCrashErrorWithDomain:[[self class] description]
                                                          code:0
                                                   description:@"Unknown MFMailComposeResult: %d", result]);
         }
@@ -254,7 +254,7 @@
                           otherButtonTitles:nil] show];
 
         kscrash_callCompletion(onCompletion, reports, NO,
-                                 [NSError errorWithDomain:[[self class] description]
+                                 [NSError KSCrashErrorWithDomain:[[self class] description]
                                                      code:0
                                               description:@"E-Mail not enabled on device"]);
         return;
@@ -324,7 +324,7 @@
         NSLog(@"Report\n%@", report);
     }
     kscrash_callCompletion(onCompletion, reports, NO,
-                             [NSError errorWithDomain:[[self class] description]
+                             [NSError KSCrashErrorWithDomain:[[self class] description]
                                                  code:0
                                           description:@"Cannot send mail on this platform"]);
 }
