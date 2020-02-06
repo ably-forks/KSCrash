@@ -1,5 +1,5 @@
 //
-//  NSMutableData+AppendUTF8.h
+//  NSMutableData+KSCrashAppendUTF8.m
 //
 //  Created by Karl Stenerud on 2012-02-26.
 //
@@ -25,23 +25,27 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#import "NSMutableData+KSCrashAppendUTF8.h"
 
 
-/** Encodes strings to UTF-8 format.
- */
-@interface NSMutableData (AppendUTF8)
+@implementation NSMutableData (KSCrashAppendUTF8)
 
-/** Append a string encoded as UTF-8.
- *
- * @param format Printf-stype format.
- */
-- (void) appendUTF8Format:(NSString*) format, ...;
+- (void) KSCrashAppendUTF8String:(NSString*) string
+{
+    const char* cstring = [string UTF8String];
+    [self appendBytes:cstring length:strlen(cstring)];
+}
 
-/** Append a string encoded as UTF-8.
- *
- * @param string The string to append.
- */
-- (void) appendUTF8String:(NSString*) string;
+- (void) KSCrashAppendUTF8Format:(NSString*) format, ...
+{
+    va_list args;
+    va_start(args, format);
+    NSString* string = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    const char* cstring = [string UTF8String];
+    [self appendBytes:cstring length:strlen(cstring)];
+}
 
 @end
+
+@interface NSMutableData_AppendUTF8_GHO92D : NSObject @end @implementation NSMutableData_AppendUTF8_GHO92D @end

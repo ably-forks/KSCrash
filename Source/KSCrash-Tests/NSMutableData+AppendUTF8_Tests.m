@@ -27,7 +27,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "NSMutableData+AppendUTF8.h"
+#import "NSMutableData+KSCrashAppendUTF8.h"
 
 
 @interface NSMutableData_AppendUTF8_Tests : XCTestCase @end
@@ -39,7 +39,7 @@
 {
     NSString* expected = @"testテスト";
     NSMutableData* data = [NSMutableData data];
-    [data appendUTF8String:expected];
+    [data KSCrashAppendUTF8String:expected];
     NSString* actual = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     XCTAssertEqualObjects(actual, expected, @"");
@@ -49,7 +49,7 @@
 {
     NSString* expected = @"Testing 1 2.0 3";
     NSMutableData* data = [NSMutableData data];
-    [data appendUTF8Format:@"Testing %d %.1f %@", 1, 2.0, @"3"];
+    [data KSCrashAppendUTF8Format:@"Testing %d %.1f %@", 1, 2.0, @"3"];
     NSString* actual = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     XCTAssertEqualObjects(actual, expected, @"");
