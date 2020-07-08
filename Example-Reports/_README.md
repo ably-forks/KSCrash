@@ -18,80 +18,80 @@ Crashes
 
 ### Abort
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/Abort.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/Abort.json)
+[Apple-Style](Abort.txt)
+[JSON-Style](Abort.json)
 
 Caused when the app calls abort().
 
 
 ### Bad Pointer
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/BadPointer.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/BadPointer.json)
+[Apple-Style](BadPointer.txt)
+[JSON-Style](BadPointer.json)
 
 Caused when the app tries to access memory it doesn't have access to. This usually occurs when you have a dangling pointer.
 
 
 ### Corrupt Memory
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CorruptMemory.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CorruptMemory.json)
+[Apple-Style](CorruptMemory.txt)
+[JSON-Style](CorruptMemory.json)
 
 Caused when the app incorrectly overwrites memory. This usually happens if you run off the end of an array. The crash doctor can often recognize this situation.
 
 
 ### Corrupt Object
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CorruptObject.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CorruptObject.json)
+[Apple-Style](CorruptObject.txt)
+[JSON-Style](CorruptObject.json)
 
 Caused when an object's memory has been corrupted. It's similar to corrupt memory, but if enough of the object remains intact, it can confuse the Objective-C runtime.
 
 
 ### Crash in Handler
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CrashInHandler.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/CrashInHandler.json)
+[Apple-Style](CrashInHandler.txt)
+[JSON-Style](CrashInHandler.json)
 
 Caused if KSCrash itself crashes, or if your custom crash handler function crashes. In such a case, it will attempt to recover as much information from the original crash as possible, and will also record where the recrash occurred.
 
 
 ### Deadlock
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/MainThreadDeadlock.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/MainThreadDeadlock.json)
+[Apple-Style](MainThreadDeadlock.txt)
+[JSON-Style](MainThreadDeadlock.json)
 
 Caused if the main thread was locked for too long. KSCrash includes an optional watchdog service that monitors the main thread and shuts down the app if the thread remains locked beyond an acceptable period.
 
 
 ### NSException
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/NSException.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/NSException.json)
+[Apple-Style](NSException.txt)
+[JSON-Style](NSException.json)
 
 Caused when the app throws an Objective-C exception. If the exception description includes a pointer value, KSCrash will attempt to introspect its contents.
 
 
 ### Stack Overflow
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/StackOverflow.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/StackOverflow.json)
+[Apple-Style](StackOverflow.txt)
+[JSON-Style](StackOverflow.json)
 
 Caused when the application runs out of stack space. Usually this happens if you make a recursive call that never terminates.
 
 
 ### Zombie
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/Zombie.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/Zombie.json)
+[Apple-Style](Zombie.txt)
+[JSON-Style](Zombie.json)
 
 Caused when you attempt to access a deallocated object. KSCrash will reconstruct the Objective-C call that was attempted on the deallocated object (shown in the CrashDoctor diagnosis).
 
 
 ### Zombie NSException
 
-[Apple-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/ZombieNSException.txt)
-[JSON-Style](https://github.com/kstenerud/KSCrash/raw/master/Example-Reports/ZombieNSException.json)
+[Apple-Style](ZombieNSException.txt)
+[JSON-Style](ZombieNSException.json)
 
 In some cases due to memory corruption, an NSException can be prematurely deallocated, in which case you'd lose the cause of the original crash. KSCrash records exceptions when they are deallocated so that it can recover this information.
 
