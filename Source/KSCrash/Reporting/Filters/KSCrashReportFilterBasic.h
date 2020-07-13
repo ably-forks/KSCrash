@@ -43,7 +43,7 @@
 
 /**
  * Passes reports to a series of subfilters, then stores the results of those operations
- * as keyed values in final master reports.
+ * as keyed values in final reports.
  *
  * Input: Anything
  * Output: NSDictionary
